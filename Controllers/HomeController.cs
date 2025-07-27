@@ -15,7 +15,12 @@ namespace Portfolio.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var user = new UserEntity()
+            {
+                Name = "Daniel Mora",
+                Age = 18
+            };
+            return View(user);
         }
 
         public IActionResult Privacy()
