@@ -1,0 +1,18 @@
+﻿.bienvenida {
+    margin: 5rem 0 5rem 0;
+}
+
+.bienvenida h1 {
+    font-size: 55px;
+    line-height: 2;
+}
+
+.bienvenida p {
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.image_logo{
+    width: 1400px;
+}
