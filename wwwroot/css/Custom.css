@@ -5,6 +5,7 @@
 .bienvenida h1 {
     font-size: 55px;
     line-height: 2;
+    margin-top: -50px;
 }
 
 .bienvenida p {
@@ -15,4 +16,21 @@
 
 .image_logo{
     width: 1400px;
+}
+
+.cabecera{
+    font-weight: bold;
+}
+
+.skills ul {
+    list-style: none;
+}
+
+.skills h3{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.skills i {
+    font-size: 25px;
 }
