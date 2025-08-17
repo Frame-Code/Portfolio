@@ -523,4 +523,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 
+#My own notes
+NOTES.md
+
 # End of https://www.toptal.com/developers/gitignore/api/csharp,aspnetcore
