@@ -1,18 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.Application.Services.Interfaces;
 using Portfolio.Domain.Models;
 using Portfolio.Shared.DTO;
 
 namespace Portfolio.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(ILogger<HomeController> logger, IProjectEntityService service)
+        : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        private readonly ILogger<HomeController> _logger = logger;
+        private readonly IProjectEntityService _service = service;
 
         public IActionResult Index()
         {
@@ -24,7 +22,7 @@ namespace Portfolio.Web.Controllers
                     LastNames = "Mora Cantillo",
                     BirthDay = new DateTime(2005, 8, 31)
                 },
-                Projects = GetProjects().ToList()
+                Projects = _service.FindAllAsync().Result
             };
             return View(projectsViewModel);
         }

@@ -1,8 +1,6 @@
-﻿using Portfolio.Domain.Models;
+﻿namespace Portfolio.Application.Services.Interfaces;
 
-namespace Portfolio.Domain.Interfaces;
-
-public interface IRepository<TEntity, TKey> 
+public interface IService<TEntity, TKey>
     where TEntity : class
     where TKey : struct
 {
