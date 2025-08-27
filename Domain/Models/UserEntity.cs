@@ -1,4 +1,4 @@
-﻿namespace Portfolio.Models;
+﻿namespace Portfolio.Domain.Models;
 
 public class UserEntity
 {

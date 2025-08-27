@@ -1,6 +1,6 @@
-﻿using Portfolio.Models;
+﻿using Portfolio.Domain.Models;
 
-namespace Portfolio.DTO;
+namespace Portfolio.Shared.DTO;
 
 public class HomeViewModel
 {

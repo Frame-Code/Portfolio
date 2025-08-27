@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Portfolio.DTO;
-using Portfolio.Models;
+using Portfolio.Domain.Models;
+using Portfolio.Shared.DTO;
 
-namespace Portfolio.Controllers
+namespace Portfolio.Web.Controllers
 {
     public class HomeController : Controller
     {
@@ -45,7 +45,7 @@ namespace Portfolio.Controllers
                 {
                     Id = 2,
                     Name = "Users Management System",
-                    Description = "Un project RestFul API para administrar usuarios hecho con java Spring boot y bootstrap",
+                    Description = "Un project RestFul API para administrar usuarios hecho con java Spring boot y SB admin2",
                     ImageURL = "images/users_management.png",
                     Link = "#"
                 },
@@ -55,7 +55,7 @@ namespace Portfolio.Controllers
                     Name = "PortFolio",
                     Description = "Este mismo proyecto siendo mi portfolio de presentación hecho con ASP.NET Core MVC",
                     ImageURL = "images/portfolio.png",
-                    Link = ""
+                    Link = "#"
                 },
                 new ProjectEntity()
                 {
@@ -70,8 +70,8 @@ namespace Portfolio.Controllers
                     Id = 5,
                     Name = "Library Management System",
                     Description = "Una aplicación de escritorio hecha completamente en java para administrar una librería",
-                    ImageURL = "images/users_management.png",
-                    Link = "#"
+                    ImageURL = "images/library_management.png",
+                    Link = "https://github.com/Frame-Code/Library-Management-System/releases/tag/v1.0"
                 }
             ];
         }
