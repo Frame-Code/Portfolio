@@ -8,7 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Application\" />
-    <Folder Include="DTO\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -285,6 +286,19 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Web\Views\Home\Index.cshtml" />
+    <AdditionalFiles Include="Web\Views\Home\Privacy.cshtml" />
+    <AdditionalFiles Include="Web\Views\Home\_Presentation.cshtml" />
+    <AdditionalFiles Include="Web\Views\Home\_Projects.cshtml" />
+    <AdditionalFiles Include="Web\Views\Home\_Skills.cshtml" />
+    <AdditionalFiles Include="Web\Views\Shared\Error.cshtml" />
+    <AdditionalFiles Include="Web\Views\Shared\_Layout.cshtml" />
+    <AdditionalFiles Include="Web\Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <AdditionalFiles Include="Web\Views\_ViewImports.cshtml" />
+    <AdditionalFiles Include="Web\Views\_ViewStart.cshtml" />
   </ItemGroup>
 
 </Project>
