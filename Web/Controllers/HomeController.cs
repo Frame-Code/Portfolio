@@ -26,14 +26,13 @@ namespace Portfolio.Web.Controllers
             };
             return View(projectsViewModel);
         }
-
+        
         private List<ProjectEntity> GetProjects()
         {
             return 
             [
                 new ProjectEntity()
                 {
-                    Id = 1,
                     Name = "Cab Management System",
                     Description = "Un proyecto RestFul API para administrar taxis hecho en java con Spring Boot",
                     ImageURL = "images/users_management.png",
@@ -41,7 +40,6 @@ namespace Portfolio.Web.Controllers
                 },
                 new ProjectEntity()
                 {
-                    Id = 2,
                     Name = "Users Management System",
                     Description = "Un project RestFul API para administrar usuarios hecho con java Spring boot y SB admin2",
                     ImageURL = "images/users_management.png",
@@ -49,7 +47,6 @@ namespace Portfolio.Web.Controllers
                 },
                 new ProjectEntity()
                 {
-                    Id = 3,
                     Name = "PortFolio",
                     Description = "Este mismo proyecto siendo mi portfolio de presentación hecho con ASP.NET Core MVC",
                     ImageURL = "images/portfolio.png",
@@ -57,7 +54,6 @@ namespace Portfolio.Web.Controllers
                 },
                 new ProjectEntity()
                 {
-                    Id = 4,
                     Name = "Pomodoro - terminal",
                     Description = "Una aplicación nativamente en la terminal que ejecuta un temporizador tipo pomodoro, hecha completamente en java",
                     ImageURL = "images/pomodoro-terminal.png",
@@ -65,7 +61,6 @@ namespace Portfolio.Web.Controllers
                 },
                 new ProjectEntity()
                 {
-                    Id = 5,
                     Name = "Library Management System",
                     Description = "Una aplicación de escritorio hecha completamente en java para administrar una librería",
                     ImageURL = "images/library_management.png",

@@ -3,6 +3,7 @@ using Portfolio.Application.Services.Impl;
 using Portfolio.Application.Services.Interfaces;
 using Portfolio.Domain.Interfaces;
 using Portfolio.Infrastructure.Data;
+using Portfolio.Infrastructure.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IProjectEntityService, ProjectEntityService>();
-builder.Services.AddScoped<IProjectEntityRepository, IProjectEntityRepository>();
+builder.Services.AddScoped<IProjectEntityRepository, ProjectEntityRepository>();
 
 
 var app = builder.Build();
@@ -38,3 +39,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
