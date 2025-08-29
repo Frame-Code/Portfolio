@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Portfolio.Domain.Models.ProjectEntity>
+
+@{
+    ViewData["Title"] = "My personal projects";
+}
+
+<div class="container">
+    <h1>Mis proyectos</h1>
+    <p>Aquí encontraras mis proyectos personales</p>
+</div>
+<partial name="_AllProjects" model="Model"/>

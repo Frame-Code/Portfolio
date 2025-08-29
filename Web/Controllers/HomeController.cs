@@ -22,9 +22,16 @@ namespace Portfolio.Web.Controllers
                     LastNames = "Mora Cantillo",
                     BirthDay = new DateTime(2005, 8, 31)
                 },
-                Projects = _service.FindAllAsync().Result
+                Projects = _service.FindAllAsync().Result.Take(3)
             };
             return View(projectsViewModel);
+        }
+
+        public IActionResult Projects()
+        {
+            var projects = _service.FindAllAsync().Result;
+            return View(projects);
+
         }
         
         private List<ProjectEntity> GetProjects()
