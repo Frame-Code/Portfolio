@@ -33,6 +33,11 @@ namespace Portfolio.Web.Controllers
             return View(projects);
 
         }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
         
         private List<ProjectEntity> GetProjects()
         {
