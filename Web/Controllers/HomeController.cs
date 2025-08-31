@@ -38,6 +38,17 @@ namespace Portfolio.Web.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Contact(MessageEntity message)
+        {
+            return RedirectToAction("Thanks");
+        }
+
+        public IActionResult Thanks()
+        {
+            return View();
+        }
         
         private List<ProjectEntity> GetProjects()
         {
@@ -47,35 +58,35 @@ namespace Portfolio.Web.Controllers
                 {
                     Name = "Cab Management System",
                     Description = "Un proyecto RestFul API para administrar taxis hecho en java con Spring Boot",
-                    ImageURL = "images/users_management.png",
+                    ImageUrl = "images/users_management.png",
                     Link = "#"
                 },
                 new ProjectEntity()
                 {
                     Name = "Users Management System",
                     Description = "Un project RestFul API para administrar usuarios hecho con java Spring boot y SB admin2",
-                    ImageURL = "images/users_management.png",
+                    ImageUrl = "images/users_management.png",
                     Link = "#"
                 },
                 new ProjectEntity()
                 {
                     Name = "PortFolio",
                     Description = "Este mismo proyecto siendo mi portfolio de presentación hecho con ASP.NET Core MVC",
-                    ImageURL = "images/portfolio.png",
+                    ImageUrl = "images/portfolio.png",
                     Link = "#"
                 },
                 new ProjectEntity()
                 {
                     Name = "Pomodoro - terminal",
                     Description = "Una aplicación nativamente en la terminal que ejecuta un temporizador tipo pomodoro, hecha completamente en java",
-                    ImageURL = "images/pomodoro-terminal.png",
+                    ImageUrl = "images/pomodoro-terminal.png",
                     Link = "https://github.com/Frame-Code/pomodoro_terminal"
                 },
                 new ProjectEntity()
                 {
                     Name = "Library Management System",
                     Description = "Una aplicación de escritorio hecha completamente en java para administrar una librería",
-                    ImageURL = "images/library_management.png",
+                    ImageUrl = "images/library_management.png",
                     Link = "https://github.com/Frame-Code/Library-Management-System/releases/tag/v1.0"
                 }
             ];

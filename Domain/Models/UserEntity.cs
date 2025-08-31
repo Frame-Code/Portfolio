@@ -2,8 +2,8 @@
 
 public class UserEntity
 {
-    public string Names { get; set; }
-    public string LastNames { get; set; }
+    public required string Names { get; set; }
+    public required string LastNames { get; set; }
     public DateTime BirthDay { get; set; }
 
     public int GetAge()

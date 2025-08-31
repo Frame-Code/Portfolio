@@ -10,5 +10,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ProjectEntity>().ToTable("Projects");
+        modelBuilder.Entity<MessageEntity>().ToTable("Messages");
     }
 }
