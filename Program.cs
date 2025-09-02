@@ -1,3 +1,4 @@
+using System.Net.Mail;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Application.Services.Impl;
 using Portfolio.Application.Services.Interfaces;
@@ -15,6 +16,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IProjectEntityService, ProjectEntityService>();
 builder.Services.AddScoped<IProjectEntityRepository, ProjectEntityRepository>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<SmtpClient, SmtpClient>();
 
 
 var app = builder.Build();

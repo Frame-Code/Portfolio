@@ -4,5 +4,5 @@ namespace Portfolio.Application.Services.Interfaces;
 
 public interface IEmailService
 {
-    Task Send(IConfiguration configuration, MessageEntity message);
+    Task Send(MessageEntity message);
 }

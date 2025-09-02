@@ -6,12 +6,17 @@ using Portfolio.Shared.DTO;
 
 namespace Portfolio.Web.Controllers
 {
-    public class HomeController(ILogger<HomeController> logger, IProjectEntityService service)
+    public class HomeController
+            (ILogger<HomeController> logger, 
+            IProjectEntityService service,
+            IEmailService emailService,
+            IConfiguration configuration)
         : Controller
     {
         private readonly ILogger<HomeController> _logger = logger;
         private readonly IProjectEntityService _service = service;
-
+        private readonly IEmailService _emailService = emailService;
+        
         public IActionResult Index()
         {
             var projectsViewModel = new HomeViewModel()
@@ -40,8 +45,9 @@ namespace Portfolio.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Contact(MessageEntity message)
+        public async Task<IActionResult> Contact(MessageEntity message)
         {
+            await _emailService.Send(message);
             return RedirectToAction("Thanks");
         }
 
